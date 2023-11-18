@@ -1,3 +1,7 @@
-# Example_config
+## Easy Install (Linux/MacOS)
 
-This can be used as an example custom config for NvChad. Do check the https://github.com/NvChad/nvcommunity
+```
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && rm -rf ~/.config/nvim/custom && git clone https://github.com/LawnmowerDave/nvchad-custom/ ~/.config/nvim/lua/custom && nvim
+```
+
+Based on https://github.com/NvChad/nvcommunity
