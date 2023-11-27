@@ -6,6 +6,7 @@
 --   command = "tabdo wincmd =",
 -- })
 
+-- prefs
 vim.wo.relativenumber = true
 vim.wo.number = true
 
@@ -14,3 +15,6 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 
 vim.opt.scrolloff = 8
+
+-- snippets paths
+vim.g.lua_snippets_path = vim.fn.stdpath "config" .. "/lua/custom/luasnippets"
