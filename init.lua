@@ -18,3 +18,6 @@ vim.opt.scrolloff = 8
 
 -- snippets paths
 vim.g.lua_snippets_path = vim.fn.stdpath "config" .. "/lua/custom/luasnippets"
+
+vim.api.nvim_command('set colorcolumn=78')
+
