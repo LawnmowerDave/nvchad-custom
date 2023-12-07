@@ -26,7 +26,15 @@ M.lawnmowerdave = {
         },
         ["<C-x>"] = {
             "<C-\\><C-n>"
-        }
+        },
+        -- center everything after navigation
+        ["<C-d>"] = { "<C-d>zz" },
+        ["<C-u>"] = { "<C-u>zz" }, 
+
+        ["n"] = { "nzz" }, 
+        ["N"] = { "Nzz" }, 
+
+	["<leader>bd"] = {":w<CR>:bd<CR>"}
     }
 }
 
