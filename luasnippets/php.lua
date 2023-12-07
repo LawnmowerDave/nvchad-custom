@@ -18,11 +18,16 @@ local types = require("luasnip.util.types")
 local conds = require("luasnip.extras.expand_conditions")
 local events = require("luasnip.util.events")
 
-print("In PHP!")
 return {
         s({trig="ec", wordTrig=true}, {
         t({"echo("}),
         i(1),
-        t({" . \"\\n\")"})
+        t({" . \"\\n\");"})
+        }),
+
+        s({trig="pr", wordTrig=true}, {
+        t({"echo(print_r("}),
+        i(1),
+        t({") . \"\\n\");"})
         })
 }
