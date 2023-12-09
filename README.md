@@ -1,6 +1,7 @@
 ## Fresh Server Install (Debian)
 ```
-sudo apt-get install neovim -y 
+sudo apt-get install neovim -y
+sudo apt-get install git -y
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && rm -rf ~/.config/nvim/lua/custom && git clone https://github.com/LawnmowerDave/nvchad-custom/ ~/.config/nvim/lua/custom && nvim
 ```
 
