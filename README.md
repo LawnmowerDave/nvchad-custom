@@ -1,6 +1,11 @@
-## Fresh Server Install (Debian)
+## Fresh Server Install (Linux)
 ```
-sudo apt-get install neovim -y
+# Remove previous install (which can cause errors)
+rm -rf ~/.local/share/nvim/lazy
+# NvChad only supports Neovim >0.5
+wget -q "https://github.com/neovim/neovim/releases/download/stable/nvim.appimage" -O /usr/bin/nvim
+chmod +x /usr/bin/nvim
+chown root:root /usr/bin/nvim
 sudo apt-get install git -y
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && rm -rf ~/.config/nvim/lua/custom && git clone https://github.com/LawnmowerDave/nvchad-custom/ ~/.config/nvim/lua/custom && nvim
 ```
