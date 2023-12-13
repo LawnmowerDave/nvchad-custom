@@ -5,18 +5,6 @@ local plugins = {
 
   -- Override plugin definition options
 
-{
-  'rmagatti/auto-session',
-  lazy=false,
-  config = function()
-    require("auto-session").setup {
-      log_level = "error",
-      auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/"},
-      auto_save_enabled = true,
-      auto_restore_enabled = true,
-    }
-  end
-},
 
   {
     "neovim/nvim-lspconfig",
@@ -51,6 +39,11 @@ local plugins = {
     opts = overrides.nvimtree,
   },
 
+  {
+    "nvim-telescope/telescope.nvim",
+    opts = overrides.telescope
+  },
+
   -- Install a plugin
   {
     "max397574/better-escape.nvim",
@@ -59,6 +52,19 @@ local plugins = {
       require("better_escape").setup()
     end,
   },
+
+    {
+  'rmagatti/auto-session',
+  lazy=false,
+  config = function()
+    require("auto-session").setup {
+      log_level = "error",
+      auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/"},
+      auto_save_enabled = true,
+      auto_restore_enabled = true,
+    }
+  end
+},
 
   -- To make a plugin not be loaded
   -- {
