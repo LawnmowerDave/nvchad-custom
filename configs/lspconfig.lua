@@ -4,7 +4,7 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
-local servers = { "html", "cssls", "tsserver", "clangd", "intelephense", "gopls", "biome" }
+local servers = { "html", "cssls", "tsserver", "clangd", "gopls", "bashls" }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -13,5 +13,13 @@ for _, lsp in ipairs(servers) do
   }
 end
 
--- 
--- lspconfig.pyright.setup { blabla}
+
+
+-- manual setups
+
+lspconfig.intelephense.setup {
+  root_dir = lspconfig.util.root_pattern("composer.json", ".git", "AutoRequire.php"),
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
