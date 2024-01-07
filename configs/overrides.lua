@@ -40,9 +40,10 @@ M.mason = {
     "clangd",
     "clang-format",
 
-
     -- go
-    "gopls"
+    "gopls",
+
+    "intelephense"
   },
 }
 
@@ -65,7 +66,9 @@ M.nvimtree = {
 M.telescope = {
       defaults = {
     file_ignore_patterns = {
-      "node_modules"
+      "node_modules",
+      ".git/", ".cache", "%.o", "%.a", "%.out", "%.class",
+		"%.pdf", "%.mkv", "%.mp4", "%.zip", "composer", "propel", "generated-conf", "data", "html"
     },
   }
 }
