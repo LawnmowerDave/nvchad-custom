@@ -15,7 +15,6 @@ vim.wo.number = true
 -- vim.opt.shiftwidth = 4
 
 -- Set tab length based on file type
-
 vim.cmd[[
   augroup FileSettings
     autocmd!
@@ -30,4 +29,6 @@ vim.opt.scrolloff = 8
 vim.g.lua_snippets_path = vim.fn.stdpath "config" .. "/lua/custom/luasnippets"
 
 vim.api.nvim_command('set colorcolumn=78')
+vim.opt.ignorecase = true
+vim.opt.virtualedit = "block"
 
